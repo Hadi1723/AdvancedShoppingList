@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Filter">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/filterHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filter by Name"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/edtFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint= "Enter Name of Item" />
+
+        <Button
+            android:id="@+id/applyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filter List" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/showFilterList"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="350dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/extraListInfo"
+            android:layout_width="match_parent"
+            android:layout_marginTop="200dp"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <!--
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/extraListInfo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+        </androidx.recyclerview.widget.RecyclerView> -->
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@id/nav_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/nav_drawer_menu2"
+
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        />
+</androidx.drawerlayout.widget.DrawerLayout>
