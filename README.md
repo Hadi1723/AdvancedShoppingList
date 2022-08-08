@@ -1,0 +1,2 @@
+# AdvancedShoppingList
+Here, I made an Android application that uses a local SQL database to help users keep track of items that they need to purchase from shopping areas. The local database keeps track of useful information for the required items such as the name of the item, the type of the item, the price and where the item can be found. Moreover, the app allows you to filter the list of shopping items and helps users to identify the total cost of shopping, and least expensive as well as most expensive item.
