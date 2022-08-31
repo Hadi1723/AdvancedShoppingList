@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/orderName"
+        android:title="Order by Name ++" />
+    <item
+        android:id="@+id/orderStore"
+        android:title="Order by Store ++" />
+    <item
+        android:id="@+id/orderType"
+        android:title="Order by Type ++" />
+    <item
+        android:id="@+id/orderPrice"
+        android:title="Order by Price ++" />
+</menu>

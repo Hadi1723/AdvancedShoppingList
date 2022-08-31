@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingClass">
+
+        <TextView
+            android:id="@+id/currentId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item #: "
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="(Mandatory) Enter Name of Item" />
+
+        <Spinner
+            android:id="@+id/edtType"
+            android:layout_width="match_parent"
+            android:prompt="@string/searchType"
+            android:layout_height="75dp"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/edtStore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="(Optional) Enter Store Name" />
+
+        <!--
+        <EditText
+            android:id="@+id/edtType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Type of Item" /> -->
+
+
+        <EditText
+            android:id="@+id/edtPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="(Optional) Enter Price of Item" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-20dp"
+            android:orientation="horizontal" >
+
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="90dp"
+                android:text="Add" />
+
+            <Button
+                android:id="@+id/btnView"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="90dp"
+                android:text="View" />
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="90dp"
+                android:text="Update" />
+
+
+            <!--
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="26dp"
+                android:text="Add" />
+
+            <Button
+                android:id="@+id/btnView"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:text="View" />
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:text="Update" /> -->
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listOfItems"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/nav_drawer_menu"
+
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        />
+</androidx.drawerlayout.widget.DrawerLayout>
